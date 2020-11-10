@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "52ccf31b-721a-43ae-ad31-6b026dea4466",
+		"name": "SpringBoot - Message API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getConversation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"conversation_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/conversation/getConversation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conversation",
+						"getConversation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createConversation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_one\": 1,\n\t\"user_two\": 2\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/conversation/createConversation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conversation",
+						"createConversation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteConversation",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"conversation_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/conversation/deleteConversation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conversation",
+						"deleteConversation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMessage",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 2,\n    \"conversation_id\": 1,\n    \"message_content\": \"Message 6\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/message/sendMessage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"message",
+						"sendMessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editMessage",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"message_id\": 1,\n    \"conversation_id\": 1,\n    \"message_content\": \"My edit message.\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/message/editMessage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"message",
+						"editMessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMessage",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/message/deleteMessage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"message",
+						"deleteMessage"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
